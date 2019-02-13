@@ -6,8 +6,8 @@ namespace TjcUsartHmiEnglishPatch {
     class Program {
         const string fileName = "hmitype.dll";
         const string fileNameBackUp = "hmitype.dll.original";
-        const string originalFileSha256 = "B8-47-93-94-75-68-5E-88-80-31-DD-60-D5-9C-7B-44-43-05-5E-98-C5-5A-CC-EA-1C-EB-90-45-D1-FB-B6-4E";
-        const string patchedFileSha256 = "03-CC-18-96-BF-E1-54-0A-B7-1B-F5-03-AE-FC-B9-FD-E2-54-4D-D4-80-25-F5-81-AD-F6-82-3F-F9-A5-F1-A0";
+        const string originalFileSha256 = "DC-C8-D4-44-0D-EC-1D-08-F8-B1-EA-4E-1F-0C-0C-87-CE-A5-03-E3-C9-53-6B-58-F9-59-52-95-9C-67-4F-0A";
+        const string patchedFileSha256 = "FD-2A-3B-98-F8-7D-86-69-76-2D-69-B7-44-B4-B0-B5-E0-54-CA-FC-63-9F-C1-48-75-A8-F2-09-A2-37-CA-4D";
 
         static void Main(string[] args) {
             try {
@@ -102,9 +102,9 @@ namespace TjcUsartHmiEnglishPatch {
         }
 
         static byte[] ApplyPatch(byte[] data) {
-            data[0x00076766] = 0x17;
-            data[0x00076806] = 0x17;
-            data[0x0007689E] = 0x17;
+            data[0x0007675E] = 0x17;
+            data[0x000767FE] = 0x17;
+            data[0x00076896] = 0x17;
 
             return data;
         }
